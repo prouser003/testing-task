@@ -1,0 +1,69 @@
+@import './styles/colors';
+
+.vertical-card {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    max-width: 370px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__image-wrap {
+        width: 370px;
+        max-width: 370px;
+        height: 200px;
+        max-height: 200px;
+        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        min-height: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 100px;
+    }
+
+    &__title {
+        color: $light-blue;
+        font-size: 12px;
+        margin-top: 15px
+    }
+
+    &__name {
+        color: $dark-grey;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: bold;
+        margin-top: 3px;
+    }
+
+    &__footer {
+        display: flex;
+        margin-top: auto;
+    }
+
+    &__publication-date {
+        color: $light-grey;
+        font-size: 12px;
+    }
+
+    &__organization-name {
+        color:  $light-blue;
+        font-size: 12px;
+    }
+
+    &__divider {
+        margin: 0 15px;
+    }
+}

@@ -1,0 +1,18 @@
+@import './styles/colors';
+
+.user {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        font-size: 24px;
+        color: $light-grey;
+    }
+
+    &__name {
+        color: $light-blue;
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+}

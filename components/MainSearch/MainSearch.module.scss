@@ -1,0 +1,28 @@
+@import './styles/colors';
+
+.main-search {
+    display: flex;
+    flex-direction: row;
+
+    &__search-section {
+        min-width: 250px;
+    }
+
+    &__search {
+        border: 1px solid lightGray;
+        padding: 15px;
+        width: auto;
+        border-radius: 3px;
+    }
+
+    &__searchLabel {
+        font-size: 16px;
+        color: $dark-grey;
+        margin: 10px 0;
+    }
+
+    &__results {
+        width: 100%;
+        margin-left: 30px;
+    }
+}

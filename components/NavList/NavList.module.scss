@@ -1,0 +1,12 @@
+@import './styles/colors';
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        color: $light-grey;
+        font-size: 18px;
+    }
+}
