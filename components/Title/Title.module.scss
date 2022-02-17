@@ -1,6 +1,8 @@
+@import './styles/colors';
+
 .title {
     font-size: 30px;
-    color: #4d4d4d;
+    color: $dark-grey;
     text-align: center;
     font-weight: bold;
 }

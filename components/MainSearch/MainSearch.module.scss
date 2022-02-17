@@ -1,3 +1,5 @@
+@import './styles/colors';
+
 .main-search {
     display: flex;
     flex-direction: row;
@@ -15,7 +17,7 @@
 
     &__searchLabel {
         font-size: 16px;
-        color: #515151;
+        color: $dark-grey;
         margin: 10px 0;
     }
 

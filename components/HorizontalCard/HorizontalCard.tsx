@@ -36,7 +36,6 @@ export const HorizontalCard = ({
                     <Divider light className={styles['horizontal-card__divider']} orientation='vertical'/>
                     <Typography className={styles['horizontal-card__organization-name']}>{organizationName}</Typography>
                 </Box>
-
             </Box>
         </Box>
     )

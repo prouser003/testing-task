@@ -1,8 +1,7 @@
-import {Header, Logo, Navigation, NavList, User, Title, MainHeader, MainSearch} from '../components';
+import {Header, Logo, Navigation, NavList, User, Title, MainHeader, MainSearch, HeaderNews} from '../components';
 import {Divider} from '@mui/material';
 import contentClient from '../lib/contentfulService';
 import {INewsConfig} from '../types';
-
 
 type NewsProps = () => {
     newsConfig: INewsConfig

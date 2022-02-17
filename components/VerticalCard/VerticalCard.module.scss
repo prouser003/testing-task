@@ -1,13 +1,18 @@
 @import './styles/colors';
 
-.horizontal-card {
+.vertical-card {
     display: flex;
     padding: 0;
-    flex-direction: row;
-    max-width: 1000px;
+    flex-direction: column;
+    max-width: 360px;
 
     &:hover {
         cursor: pointer;
+    }
+
+    &__image {
+        width: 350px;
+        height: 200px;
     }
 
     &__image-wrap {
@@ -22,35 +27,25 @@
         align-items: center;
     }
 
-    &__image {
-        width: 350px;
-        height: 200px;
-    }
-
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        margin-left: 15px;
+        min-height: 125px;
     }
 
     &__title {
         color: $light-blue;
         font-size: 12px;
+        margin-top: 15px
     }
 
     &__name {
         color: $dark-grey;
         font-size: 18px;
+        line-height: 20px;
         font-weight: bold;
-    }
-
-    &__description {
-        color: $regular-grey;
-        font-size: 15px;
-        max-height: 90px;
-        overflow: hidden;
-        margin-top: 10px;
+        margin-top: 3px;
     }
 
     &__footer {

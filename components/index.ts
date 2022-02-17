@@ -8,3 +8,5 @@ export * from './MainSearch/MainSearch';
 export * from './MainHeader/MainHeader';
 export * from './HorizontalCard/HorizontalCard';
 export * from './SearchResults/SearchResults';
+export * from './VerticalCard/VerticalCard';
+export * from './HeaderNews/HeaderNews';
