@@ -1,0 +1,16 @@
+.user {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        font-size: 24px;
+        color: #595959;
+    }
+
+    &__name {
+        color: #69a2c4;
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+}
