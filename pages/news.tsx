@@ -1,15 +1,27 @@
-import {Header, Logo, Navigation, NavList, User} from '../components';
+import {Header, Logo, Navigation, NavList, User, Title} from '../components';
 import {Divider} from '@mui/material';
+import contentClient from '../lib/contentfulService';
+import {INewsConfig} from '../types';
+import {MainHeader} from "../components/MainHeader/MainHeader";
 
-const items = [
-    {title: 'News', to: '/news', id: '1'}
-]
+type NewsProps = () => {
+    newsConfig: INewsConfig
+}
 
-function News() {
+function News({newsConfig}: NewsProps) {
+    const {title, logo, searchLabel, menuLabel} = newsConfig
+    const imageUrl = logo?.fields?.file?.url
+    const {height: imageHeight, width: imageWidth} = logo?.fields?.file?.details?.image
+
+    // just in case of more items in nav
+    const items = [
+        {title: menuLabel, to: `/${menuLabel.toLowerCase()}`, id: '1'}
+    ]
+
     return (
         <>
             <Header>
-                <Logo />
+                <Logo mt={4} mb={4} url={imageUrl} height={imageHeight} width={imageWidth}/>
                 <Divider light/>
                 <Navigation>
                     <NavList items={items}/>
@@ -17,6 +29,9 @@ function News() {
                 </Navigation>
             </Header>
             <Divider light/>
+            <MainHeader>
+                <Title text={title} mt={8} mb={8}/>
+            </MainHeader>
         </>
     );
 };
@@ -24,7 +39,20 @@ function News() {
 export default News;
 
 export const getServerSideProps = async (context) => {
+    const newsConfig = await contentClient.getEntries({
+        'content_type': 'newsConfig'
+    })
+
+    const {ttile, logo, searchLabel, menuLabel} = newsConfig?.items[0]?.fields;
+
     return {
-        props: {}
+        props: {
+            newsConfig: {
+                title: ttile,
+                logo,
+                searchLabel,
+                menuLabel
+            }
+        }
     };
 };
