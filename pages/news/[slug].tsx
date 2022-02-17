@@ -1,5 +1,6 @@
 import {HorizontalCard} from '../../components';
 import {GetServerSideProps} from 'next';
+import {Box} from '@mui/material';
 
 type ItemPageProps = {
     title: string,
@@ -13,14 +14,17 @@ type ItemPageProps = {
 const ItemPage = ({data}: ItemPageProps) => {
     const {title, name, description, imageUrl, publicationDate, organizationName} = data
     return (
-        <HorizontalCard
-            mt={5}
-            mb={1}
-            title={title}
-            name={name}
-            description={description}
-            imageUrl={imageUrl}
-            publicationDate={publicationDate} organizationName={organizationName}/>
+        <Box>
+            <HorizontalCard
+                mt={5}
+                mb={1}
+                title={title}
+                name={name}
+                description={description}
+                imageUrl={imageUrl}
+                publicationDate={publicationDate} organizationName={organizationName}/>
+
+        </Box>
     );
 };
 

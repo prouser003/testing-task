@@ -12,19 +12,19 @@
 
     &__image-wrap {
         width: 350px;
-        max-width: 350px;
+        min-width: 350px;
         height: 200px;
-        max-height: 200px;
+        min-height: 200px;
         vertical-align: middle;
-        flex-grow: 1;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
     }
 
     &__image {
-        width: 350px;
-        height: 200px;
+        width: 100%;
+        min-height: 100%;
     }
 
     &__content {

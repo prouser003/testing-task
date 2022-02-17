@@ -4,34 +4,34 @@
     display: flex;
     padding: 0;
     flex-direction: column;
-    max-width: 360px;
+    max-width: 370px;
 
     &:hover {
         cursor: pointer;
     }
 
-    &__image {
-        width: 350px;
-        height: 200px;
-    }
-
     &__image-wrap {
-        width: 350px;
-        max-width: 350px;
+        width: 370px;
+        max-width: 370px;
         height: 200px;
         max-height: 200px;
         vertical-align: middle;
-        flex-grow: 1;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        min-height: 100%;
     }
 
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        min-height: 125px;
+        min-height: 100px;
     }
 
     &__title {
