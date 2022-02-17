@@ -1,8 +1,8 @@
-import {Header, Logo, Navigation, NavList, User, Title} from '../components';
+import {Header, Logo, Navigation, NavList, User, Title, MainHeader, MainSearch} from '../components';
 import {Divider} from '@mui/material';
 import contentClient from '../lib/contentfulService';
 import {INewsConfig} from '../types';
-import {MainHeader} from "../components/MainHeader/MainHeader";
+
 
 type NewsProps = () => {
     newsConfig: INewsConfig
@@ -32,6 +32,8 @@ function News({newsConfig}: NewsProps) {
             <MainHeader>
                 <Title text={title} mt={8} mb={8}/>
             </MainHeader>
+            <Divider light />
+            <MainSearch searchLabel={searchLabel} mt={2} mb={2} />
         </>
     );
 };

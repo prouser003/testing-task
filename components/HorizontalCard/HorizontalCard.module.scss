@@ -1,0 +1,67 @@
+.horizontal-card {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+
+    &__image-wrap {
+        width: 350px;
+        max-width: 350px;
+        height: 200px;
+        max-height: 200px;
+        vertical-align: middle;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__image {
+        width: 350px;
+        height: 200px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 15px;
+    }
+
+    &__title {
+        color: #4a8eb7;
+        font-size: 12px;
+    }
+
+    &__name {
+        color: #7a7a7a;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    &__description {
+        color: #7d7d7d;
+        font-size: 15px;
+        max-height: 90px;
+        overflow: hidden;
+        margin-top: 15px;
+    }
+
+    &__footer {
+        display: flex;
+        margin-top: auto;
+    }
+
+    &__publication-date {
+        color: #8d8d8d;
+        font-size: 12px;
+    }
+
+    &__organization-name {
+        color:  #4a8eb7;
+        font-size: 12px;
+    }
+
+    &__divider {
+        margin: 0 15px;
+    }
+}

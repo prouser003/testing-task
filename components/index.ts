@@ -4,3 +4,7 @@ export * from './Navigation/Navigation';
 export * from './NavList/NavList';
 export * from './User/User';
 export * from './Title/Title';
+export * from './MainSearch/MainSearch';
+export * from './MainHeader/MainHeader';
+export * from './HorizontalCard/HorizontalCard';
+export * from './SearchResults/SearchResults';

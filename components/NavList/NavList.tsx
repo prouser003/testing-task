@@ -16,7 +16,13 @@ export const NavList = ({items}: NavListProps) => {
         <ul className={styles['nav-list']}>
             {items.map((item: INavItem) => {
                 return (
-                    <li className={styles['nav-list__item']} key={item.id}><Link href={item.to}><a>{item.title}</a></Link></li>
+                    <li className={styles['nav-list__item']}
+                        key={item.id}>
+                        <Link
+                            href={item.to}>
+                            <a>{item.title}</a>
+                        </Link>
+                    </li>
                 );
             })}
         </ul>

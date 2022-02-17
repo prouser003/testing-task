@@ -14,3 +14,31 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* Added styles for serchbox globally */
+.ais-SearchBox-reset {
+  display: none;
+}
+
+.ais-SearchBox-submit {
+  background: #01619b;
+  border: 1px solid lightblue;
+  height: 38px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.ais-SearchBox-form {
+  display: flex;
+  align-items: center;
+}
+
+.ais-SearchBox-input {
+  padding: 10px;
+  border: 1px solid lightgray;
+  display: inline-block;
+  outline: none;
+}
+.ais-SearchBox-input:focus {
+  border-color: lightblue;
+}

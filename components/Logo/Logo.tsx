@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {Box} from "@mui/material";
+import {Box} from '@mui/material';
 
 type LogoProps = {
     url: string,
@@ -7,7 +7,7 @@ type LogoProps = {
     width: number,
     mt: number,
     mb: number
-}
+};
 
 export const Logo = ({url, height, width, mt, mb}: LogoProps) => {
 

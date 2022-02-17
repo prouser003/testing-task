@@ -18,3 +18,21 @@ export interface INewsConfig {
     menuLabel: string,
     searchLabel: string
 }
+
+export interface IHit {
+    topics: {
+        title: string
+    },
+    organization: [
+        {
+            fields: {
+                name: string
+            }
+        }
+    ]
+    name: string,
+    description: string,
+    imageUrl: string,
+    publicationDate: string,
+    slug?: string
+}
