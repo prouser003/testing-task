@@ -5,6 +5,8 @@
 + for images used regular img instead of 'next/image' because of domains issue  
 + better to make css variables for reuse of colors etc  
 + at the moment algolia searches by default prop  
++ a lot of things can be made for SEO (meta tags, static pages if there are not too much news)  
++ see issue with custom fonts
 
 #### Things are not done because need additional info:
 + No vertical cards in header

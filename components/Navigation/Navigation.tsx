@@ -6,7 +6,7 @@ type NavigationProps = {
     children: ReactNode
 };
 
-export const Navigation = ({children}) => {
+export const Navigation = ({children}: NavigationProps) => {
     return (
         <Box className={styles['navigation']}>
             {children}

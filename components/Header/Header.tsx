@@ -5,7 +5,7 @@ type HeaderProps = {
     children: ReactNode
 }
 
-export const Header = ({children}) => {
+export const Header = ({children}: HeaderProps) => {
     return (
         <Container maxWidth='lg'>
             {children}

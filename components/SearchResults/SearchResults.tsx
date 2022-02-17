@@ -1,23 +1,23 @@
-import {connectInfiniteHits} from 'react-instantsearch-dom'
+import {connectInfiniteHits} from 'react-instantsearch-dom';
 import {HorizontalCard} from '../index';
 import {IHit} from '../../types';
 import {Divider, Typography} from '@mui/material';
 import {useRouter} from 'next/router';
-import styles from './SearchResults.module.scss'
+import styles from './SearchResults.module.scss';
 import {useEffect} from 'react';
 
 type HitsProps = {
     hits: IHit[],
-    hasMore: any,
-    refineNext: any
+    hasMore: boolean,
+    refineNext: () => void
 };
 
 const Hits = ({hits, hasMore, refineNext}: HitsProps) => {
+    const router = useRouter();
+    let sentinel: null | Element = null;
 
-    let sentinel: any = null;
-
-    const onSentinelIntersection = (entries: any) => {
-        entries.forEach((entry: any) => {
+    const onSentinelIntersection = (entries) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting && hasMore) {
                 refineNext();
             }
@@ -26,7 +26,9 @@ const Hits = ({hits, hasMore, refineNext}: HitsProps) => {
 
     useEffect(() => {
         const observer = new IntersectionObserver(onSentinelIntersection)
-        observer.observe(sentinel)
+        if (sentinel !== null) {
+            observer.observe(sentinel)
+        }
         return () => {
             observer.disconnect()
         };
@@ -43,7 +45,7 @@ const Hits = ({hits, hasMore, refineNext}: HitsProps) => {
                     const organizationName = hit.organization[0].fields.name
                     const {slug, name, description, imageUrl, publicationDate} = hit
                     return (
-                        <div key={slug} onClick={() => console.log(hit)}>
+                        <div key={slug} onClick={() => router.push(`/news/${hit.slug}`)}>
                             <HorizontalCard
                                 mb={3}
                                 mt={3}

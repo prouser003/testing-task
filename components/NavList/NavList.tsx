@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import styles from './NavList.module.scss'
+import Link from 'next/link';
+import styles from './NavList.module.scss';
 
 interface INavItem {
     title: string;

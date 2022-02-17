@@ -1,4 +1,4 @@
-import {Box, Typography} from "@mui/material";
+import {Box, Typography} from '@mui/material';
 import styles from './User.module.scss';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
