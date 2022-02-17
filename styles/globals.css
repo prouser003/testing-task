@@ -38,6 +38,7 @@ a {
   border: 1px solid lightgray;
   display: inline-block;
   outline: none;
+  width: 85%;
 }
 .ais-SearchBox-input:focus {
   border-color: lightblue;
