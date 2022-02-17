@@ -1,5 +1,5 @@
 import {Box, Container, Typography} from '@mui/material';
-import {InstantSearch, SearchBox} from 'react-instantsearch-dom';
+import {InstantSearch, SearchBox, Configure} from 'react-instantsearch-dom';
 import algoliaSearch from '../../lib/algoliaService';
 import {SearchResults} from '../index';
 import styles from './MainSearch.module.scss';
@@ -15,6 +15,7 @@ export const MainSearch = ({searchLabel, mt, mb}: MainSearchProps) => {
         <Container maxWidth='lg' mt={mt} mb={mb}>
             <Box mt={mt} mb={mb}>
                 <InstantSearch searchClient={algoliaSearch} indexName='news'>
+                    <Configure hitsPerPage={5} />
                     <Box className={styles['main-search']}>
                         <Box className={styles['main-search__search-section']}>
                             <Box className={styles['main-search__search']}>
